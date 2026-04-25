@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增长 Growth Croissance | 咨询工具推荐</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'Montserrat', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f4ff',
+                            100: '#e0e9ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#1e1b4b',
+                            DEFAULT: '#1a365d',
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Noto Sans SC', 'Montserrat', sans-serif;
+        }
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        }
+        /* Fallback card styles */
+        .tool-card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo + Brand -->
+                <div class="flex items-center space-x-3">
+                    <!-- QR Code Logo -->
+                    <div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="assets/qrcode/qrcode.png" alt="增长公众号" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-bold text-xl text-primary-900">增长 Growth Croissance</h1>
+                        <p class="text-xs text-gray-500">咨询顾问工具库</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#tools" class="text-gray-600 hover:text-primary-600 transition">工具库</a>
+                    <a href="#categories" class="text-gray-600 hover:text-primary-600 transition">分类</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary-600 transition">关于我们</a>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#tools" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                    探索工具
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-heading text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                赋能咨询顾问的<span class="gradient-text">智能工具</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+                精选高效工具库，助力管理咨询与战略咨询顾问提升工作效率，从数据分析到客户交付，一站式解决方案。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#tools" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition inline-flex items-center justify-center">
+                    浏览工具库
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+                <a href="#about" class="bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-200 px-8 py-3 rounded-lg font-medium transition">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section id="categories" class="py-8 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary-600 text-white text-sm font-medium transition" data-category="all">
+                        全部工具
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="AI">
+                        AI工具
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="数据分析">
+                        数据分析
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="项目管理">
+                        项目管理
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="研究">
+                        研究工具
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="市场调研">
+                        市场调研
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="独立咨询">
+                        独立咨询
+                    </button>
+                </div>
+
+                <!-- Search -->
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="搜索工具名称或关键词..."
+                           class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent w-64">
+                    <svg class="w-5 h-5 text-gray-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section id="tools" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    精选咨询工具
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    我们为管理咨询和战略咨询顾问精心筛选了以下工具，帮助您提升工作效率、优化客户交付。
+                </p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="text-center py-16">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-gray-200 border-t-primary-600"></div>
+                <p class="mt-4 text-gray-500">加载工具数据中...</p>
+            </div>
+
+            <!-- Tools Cards Grid -->
+            <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-16">
+                <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="text-gray-500 text-lg">未找到匹配的工具，请尝试其他关键词。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-6">关于增长 Growth Croissance</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                「增长 Growth Croissance」是一个专注于咨询行业效率提升的公众号。我们致力于为管理咨询和战略咨询顾问精选和推荐实用的工具、方法论和最佳实践，帮助您在快速变化的商业环境中保持竞争优势。
+            </p>
+            <div class="flex justify-center">
+                <!-- QR Code Image -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="assets/qrcode/qrcode.png" alt="增长公众号二维码" class="w-48 h-48 object-contain">
+                    <p class="text-sm text-gray-500 mt-2 text-center">扫描关注公众号</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-white">
+                        <img src="assets/qrcode/qrcode.png" alt="增长" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-bold text-white">增长 Growth Croissance</h3>
+                        <p class="text-sm text-gray-400">咨询顾问的专业工具库</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm">© 2026 增长 Growth Croissance. 持续更新中。</p>
+                    <p class="text-xs text-gray-500 mt-1">工具推荐频率：每月更新</p>
+                    <a href="mailto:contact-growth@proton.me" class="text-sm text-blue-400 hover:text-blue-300 mt-2 inline-block">
+                        contact-growth@proton.me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Tools data
+        const toolsData = {
+            "tools": [
+                {
+                    "id": "notion",
+                    "name": "Notion",
+                    "logo": "assets/logos/notion.png",
+                    "category": "项目管理",
+                    "description": "一体化工作空间，整合文档、知识库、项目管理、任务追踪等功能。",
+                    "recommendation": "咨询项目文档管理和知识沉淀的首选工具，模板丰富，结构化能力强。",
+                    "useCases": [
+                        "项目文档集中管理",
+                        "客户交付物模板化",
+                        "知识库搭建",
+                        "项目进度追踪"
+                    ],
+                    "website": "https://www.notion.so/",
+                    "tags": ["文档管理", "知识库", "项目管理", "协作"]
+                },
+                {
+                    "id": "atypica-ai",
+                    "name": "Atypica AI",
+                    "logo": "assets/logos/atypica.svg",
+                    "category": "市场调研",
+                    "description": "AI驱动的市场调研平台，快速收集和分析市场数据、竞品信息和行业趋势。",
+                    "recommendation": "帮助咨询顾问高效完成市场调研项目，自动生成调研报告，节省大量数据收集和分析时间。",
+                    "useCases": [
+                        "市场规模和趋势分析",
+                        "竞品情报收集",
+                        "消费者洞察提取",
+                        "行业报告自动生成"
+                    ],
+                    "website": "https://atypica.ai/",
+                    "discountEmail": "contact-growth@proton.me",
+                    "tags": ["市场调研", "竞品分析", "AI报告", "数据收集"]
+                },
+                {
+                    "id": "notebooklm",
+                    "name": "NotebookLM",
+                    "logo": "assets/logos/notebooklm.png",
+                    "category": "AI",
+                    "description": "Google推出的AI研究助手，基于你的文档进行深度分析和对话。",
+                    "recommendation": "上传客户报告、行业研究、竞品分析等文档后，可与AI深度对话，快速提取洞察、生成摘要、发现文档间的关联。",
+                    "useCases": [
+                        "客户报告深度分析",
+                        "多份研究文档交叉解读",
+                        "快速生成执行摘要",
+                        "发现文档中的隐藏洞察"
+                    ],
+                    "website": "https://notebooklm.google.com/",
+                    "tags": ["AI研究助手", "文档分析", "知识提取", "Google生态"]
+                },
+                {
+                    "id": "polsia",
+                    "name": "Polsia",
+                    "logo": "assets/logos/polsia.svg",
+                    "category": "独立咨询",
+                    "description": "为独立咨询顾问打造的商业智能平台，帮助咨询师评估市场机会、定义服务定位、建立商业模式。",
+                    "recommendation": "独立咨询顾问或小型咨询工作室的必备工具，可系统化评估是否适合独立执业、如何定位专长领域、如何定价和获客。",
+                    "useCases": [
+                        "评估独立咨询的可行性",
+                        "定义咨询服务定位和差异化",
+                        "制定咨询费率和定价策略",
+                        "规划客户获取渠道"
+                    ],
+                    "website": "https://www.polsia.com/",
+                    "tags": ["独立咨询", "商业计划", "市场定位", "定价策略"]
+                },
+                {
+                    "id": "thinkcell-alternative",
+                    "name": "DrawThis (GitHub)",
+                    "logo": "assets/logos/drawthis.svg",
+                    "category": "数据分析",
+                    "description": "开源的图表绘制工具，可完全替代Thinkcell，支持各类商业图表的创建和编辑。",
+                    "recommendation": "Thinkcell的开源替代品，咨询顾问可以免费使用，创建专业级的商业图表、瀑布图、甘特图等，大幅降低软件成本。",
+                    "useCases": [
+                        "创建咨询报告中的专业图表",
+                        "制作瀑布图和漏斗图",
+                        "绘制组织结构图",
+                        "生成项目时间线"
+                    ],
+                    "website": "https://github.com/drawthis/drawthis",
+                    "tags": ["开源工具", "图表绘制", "Thinkcell替代", "免费"]
+                }
+            ]
+        };
+
+        // DOM Elements
+        const toolsGrid = document.getElementById('toolsGrid');
+        const noResults = document.getElementById('noResults');
+        const loadingState = document.getElementById('loadingState');
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        let currentCategory = 'all';
+        let currentSearch = '';
+
+        // Render tools
+        function renderTools() {
+            const filteredTools = toolsData.tools.filter(tool => {
+                const matchesCategory = currentCategory === 'all' || tool.category === currentCategory;
+                const matchesSearch = tool.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                                     tool.description.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                                     tool.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()));
+                return matchesCategory && matchesSearch;
+            });
+
+            // Hide loading, show grid
+            if (loadingState) loadingState.classList.add('hidden');
+            if (toolsGrid) toolsGrid.classList.remove('hidden');
+
+            if (filteredTools.length === 0) {
+                if (toolsGrid) toolsGrid.classList.add('hidden');
+                if (noResults) noResults.classList.remove('hidden');
+                return;
+            }
+
+            if (toolsGrid) toolsGrid.classList.remove('hidden');
+            if (noResults) noResults.classList.add('hidden');
+
+            if (toolsGrid) {
+                toolsGrid.innerHTML = filteredTools.map(tool => `
+                    <div class="tool-card" data-category="${tool.category}">
+                        <div class="p-6">
+                            <div class="flex items-start justify-between mb-4">
+                                <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center flex-shrink-0">
+                                    ${tool.logo ? `<img src="${tool.logo}" alt="${tool.name}" class="w-12 h-12 object-contain" onerror="this.style.display='none'">` : `<div class="text-2xl font-bold text-primary-600">${tool.name.charAt(0)}</div>`}
+                                </div>
+                                <span class="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
+                                    ${tool.category}
+                                </span>
+                            </div>
+
+                            <h3 class="font-heading text-xl font-bold text-gray-900 mb-2">${tool.name}</h3>
+                            <p class="text-gray-600 text-sm mb-4">${tool.description}</p>
+
+                            <div class="bg-blue-50 border-l-4 border-primary-500 p-3 mb-4">
+                                <p class="text-sm text-primary-800">
+                                    <strong>推荐理由：</strong>${tool.recommendation}
+                                </p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h4 class="text-sm font-semibold text-gray-700 mb-2">适用场景</h4>
+                                <ul class="space-y-2">
+                                    ${tool.useCases.map(useCase => `
+                                        <li class="flex items-start text-sm text-gray-600">
+                                            <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            ${useCase}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-col gap-2">
+                                <a href="${tool.website}" target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center justify-center w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-2.5 px-4 rounded-lg transition">
+                                    访问官网
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                                ${tool.discountEmail ? `
+                                <a href="mailto:${tool.discountEmail}"
+                                   class="inline-flex items-center justify-center w-full bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium py-2 px-4 rounded-lg transition">
+                                    点我获取折扣
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </a>
+                                ` : ''}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Initialize
+        function init() {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    renderTools();
+                    setupEventListeners();
+                });
+            } else {
+                renderTools();
+                setupEventListeners();
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => {
+                        b.classList.remove('bg-primary-600', 'text-white');
+                        b.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    btn.classList.remove('bg-gray-100', 'text-gray-700');
+                    btn.classList.add('bg-primary-600', 'text-white');
+
+                    currentCategory = btn.dataset.category;
+                    renderTools();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    currentSearch = e.target.value.trim();
+                    renderTools();
+                });
+            }
+        }
+
+        // Start
+        init();
+    </script>
+</body>
+</html>
