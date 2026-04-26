@@ -1,14 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
   <defs>
     <linearGradient id="polsiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#059669"/>
-      <stop offset="100%" style="stop-color:#10B981"/>
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#34D399"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
   </defs>
-  <!-- 背景 -->
-  <rect width="120" height="120" rx="24" fill="url(#polsiaGrad)"/>
-  <!-- P字母 -->
-  <text x="60" y="78" font-family="'Montserrat', Arial, sans-serif" font-size="72" font-weight="800" fill="white" text-anchor="middle">P</text>
-  <!-- i点 -->
-  <circle cx="88" cy="28" r="10" fill="white" opacity="0.95"/>
+
+  <!-- 背景圆角矩形 -->
+  <rect width="120" height="120" rx="28" fill="url(#polsiaGrad)" filter="url(#shadow)"/>
+
+  <!-- P字母 + 抽象增长箭头 -->
+  <g transform="translate(20, 20)">
+    <!-- P字母主体 -->
+    <path d="M28 6 C28 6 20 6 20 18 C20 30 28 30 28 30 L28 54 L40 54 C50 54 60 48 60 36 C60 24 52 18 40 18 L28 18 Z"
+          fill="white" opacity="0.95"/>
+    <!-- 增长箭头（右上角） -->
+    <path d="M52 18 L58 12 L64 18 L58 24 Z" fill="#10B981" opacity="0.9"/>
+    <path d="M52 18 L58 24 L64 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+  </g>
+
+  <!-- 品牌标识 -->
+  <text x="60" y="100" font-family="'Montserrat', Arial, sans-serif" font-size="28" font-weight="800" fill="white" text-anchor="middle" letter-spacing="2">P</text>
 </svg>
