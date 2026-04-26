@@ -289,8 +289,25 @@
                         "行业报告自动生成"
                     ],
                     "website": "https://atypica.ai/",
-                    "discountEmail": "contact-growth@proton.me",
+                    "discountUrl": "https://atypica.ai/?via=alex",
                     "tags": ["市场调研", "竞品分析", "AI报告", "数据收集"]
+                },
+                {
+                    "id": "xavier-ai",
+                    "name": "Xavier AI",
+                    "logo": "assets/logos/xavier.svg",
+                    "category": "AI工具",
+                    "description": "智能AI助手，帮助咨询顾问快速生成报告、分析数据、优化工作流程。",
+                    "recommendation": "Xavier AI能够理解复杂的咨询任务，自动生成专业文档，并提供深度数据分析，是咨询顾问的高效搭档。",
+                    "useCases": [
+                        "自动生成客户报告",
+                        "数据分析与可视化",
+                        "会议纪要自动整理",
+                        "演示文稿快速制作"
+                    ],
+                    "website": "https://xavier.ai/",
+                    "contactEmail": "contact-growth@proton.me",
+                    "tags": ["AI助手", "报告生成", "数据分析", "效率工具"]
                 },
                 {
                     "id": "notebooklm",
@@ -309,6 +326,23 @@
                     "tags": ["AI研究助手", "文档分析", "知识提取", "Google生态"]
                 },
                 {
+                    "id": "typeless",
+                    "name": "Typeless",
+                    "logo": "assets/logos/typeless.svg",
+                    "category": "AI工具",
+                    "description": "智能语音输入键盘，通过语音快速记录想法、撰写文档，提升内容创作效率。",
+                    "recommendation": "咨询顾问需要大量撰写报告和邮件，Typeless让语音输入更精准高效，支持多语言，是移动办公神器。",
+                    "useCases": [
+                        "语音快速记录客户反馈",
+                        "口述生成报告初稿",
+                        "多语言会议录音转文字",
+                        "移动端高效内容创作"
+                    ],
+                    "website": "https://www.typeless.com/",
+                    "discountUrl": "https://www.typeless.com/refer?code=QDXD7BR",
+                    "tags": ["语音输入", "生产力", "AI键盘", "移动办公"]
+                },
+                {
                     "id": "polsia",
                     "name": "Polsia",
                     "logo": "assets/logos/polsia.svg",
@@ -322,6 +356,7 @@
                         "规划客户获取渠道"
                     ],
                     "website": "https://www.polsia.com/",
+                    "discountUrl": "https://polsia.com/?ref=KHL2FA7A",
                     "tags": ["独立咨询", "商业计划", "市场定位", "定价策略"]
                 },
                 {
@@ -420,10 +455,19 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </a>
-                                ${tool.discountEmail ? `
-                                <a href="mailto:${tool.discountEmail}"
+                                ${tool.discountUrl ? `
+                                <a href="${tool.discountUrl}" target="_blank" rel="noopener noreferrer"
                                    class="inline-flex items-center justify-center w-full bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium py-2 px-4 rounded-lg transition">
                                     点我获取折扣
+                                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m-4-4h8"></path>
+                                    </svg>
+                                </a>
+                                ` : ''}
+                                ${tool.contactEmail ? `
+                                <a href="mailto:${tool.contactEmail}"
+                                   class="inline-flex items-center justify-center w-full bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-medium py-2 px-4 rounded-lg transition">
+                                    联系我们
                                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                     </svg>

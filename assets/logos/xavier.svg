@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="xavierGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景 -->
+  <rect width="120" height="120" rx="24" fill="url(#xavierGrad)"/>
+  <!-- X字母 -->
+  <text x="60" y="78" font-family="'Montserrat', Arial, sans-serif" font-size="72" font-weight="800" fill="white" text-anchor="middle">X</text>
+  <!-- AI小标 -->
+  <text x="78" y="98" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">AI</text>
+</svg>
