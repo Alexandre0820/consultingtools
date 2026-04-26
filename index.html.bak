@@ -105,7 +105,7 @@
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#tools" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_tools">工具库</a>
-                    <a href="#enterprise-cta" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_enterprise">赋能企业AI转型</a>
+                    <a href="#categories" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_categories">分类</a>
                     <a href="#about" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_about">关于我们</a>
                 </div>
 
@@ -151,6 +151,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <div class="flex flex-wrap gap-2">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary-600 text-white text-sm font-medium transition" data-category="all" data-i18n="filter_all">
+                        全部工具
+                    </button>
                     <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="AI" data-i18n="filter_ai">
                         AI工具
                     </button>
@@ -160,14 +163,14 @@
                     <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="项目管理" data-i18n="filter_project">
                         项目管理
                     </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="研究" data-i18n="filter_research">
+                        研究工具
+                    </button>
                     <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="市场调研" data-i18n="filter_market">
                         市场调研
                     </button>
                     <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="独立咨询" data-i18n="filter_independent">
                         独立咨询
-                    </button>
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="企业AI" data-i18n="filter_enterprise">
-                        企业AI
                     </button>
                 </div>
 
@@ -217,6 +220,199 @@
     </section>
 
     <!-- Enterprise AI Tools Section -->
+    <section id="enterprise-tools" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="enterprise_title">
+                    🏢 企业级 AI 工具
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-i18n="enterprise_subtitle">
+                    面向 To B 领域的 AI 驱动的企业软件和解决方案，助力企业实现智能化转型。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 素问 AI -->
+                <div class="tool-card">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center flex-shrink-0">
+                                <div class="text-2xl font-bold text-purple-600">素</div>
+                            </div>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
+                                企业AI
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 mb-2">素问 AI</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            面向医疗健康和生命科学领域的垂直大模型，提供专业的医学知识问答、文献分析、临床决策支持。
+                        </p>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-3 mb-4">
+                            <p class="text-sm text-purple-800">
+                                <strong>推荐理由：</strong>专为医疗行业打造，准确度高，符合医疗合规要求，帮助企业快速应用AI提升研发和临床效率。
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">适用场景</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    医学文献智能分析
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    临床试验数据解读
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    医疗知识问答系统
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    药物研发智能辅助
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="https://suyun.ai/" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 px-4 rounded-lg transition">
+                            访问官网
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 更多企业工具（预留卡片） -->
+                <div class="tool-card">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center flex-shrink-0">
+                                <div class="text-2xl font-bold text-blue-600">AI</div>
+                            </div>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                                企业AI
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 mb-2">企业AI平台</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            一体化企业级AI中台，整合大模型能力，为企业提供可落地的AI解决方案。
+                        </p>
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-3 mb-4">
+                            <p class="text-sm text-blue-800">
+                                <strong>推荐理由：</strong>帮助企业快速构建AI能力，降低部署成本，支持私有化部署保障数据安全。
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">适用场景</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    智能客服与知识库
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    文档智能处理
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    业务流程自动化
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    数据分析与预测
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#enterprise-cta"
+                           class="inline-flex items-center justify-center w-full bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-medium py-2 px-4 rounded-lg transition">
+                            咨询详情
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 更多预留卡片 -->
+                <div class="tool-card">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center flex-shrink-0">
+                                <div class="text-2xl font-bold text-green-600">CRM</div>
+                            </div>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                                企业AI
+                            </span>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-gray-900 mb-2">智能CRM系统</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            AI增强的客户关系管理系统，自动化销售流程，提升客户满意度和转化率。
+                        </p>
+                        <div class="bg-green-50 border-l-4 border-green-500 p-3 mb-4">
+                            <p class="text-sm text-green-800">
+                                <strong>推荐理由：</strong>集成AI客户画像分析、智能推荐、自动跟进，帮助企业实现销售全流程数字化。
+                            </p>
+                        </div>
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-gray-700 mb-2">适用场景</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    销售自动化
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    客户智能分群
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    智能推荐引擎
+                                </li>
+                                <li class="flex items-start text-sm text-gray-600">
+                                    <svg class="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    客户服务自动化
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#enterprise-cta"
+                           class="inline-flex items-center justify-center w-full bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-medium py-2 px-4 rounded-lg transition">
+                            咨询详情
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise CTA Section -->
     <section id="enterprise-cta" class="py-20 md:py-28 bg-gradient-to-r from-primary-900 via-primary-800 to-primary-900 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6">
@@ -224,10 +420,10 @@
                     🚀 企业级服务
                 </span>
             </div>
-            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6" data-i18n="cta_title">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">
                 赋能企业 AI 转型
             </h2>
-            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10" data-i18n="cta_subtitle">
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
                 我们为 To B 企业提供全方位的 AI 咨询与培训服务，陪伴企业完成 AI 转型之旅，实现人机协同的新工作模式。
             </p>
 
@@ -239,8 +435,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2"><span data-i18n="service1_title">AI 转型陪跑</span></h3>
-                    <p class="text-gray-300 text-sm" data-i18n="service1_desc">
+                    <h3 class="text-xl font-bold mb-2">AI 转型陪跑</h3>
+                    <p class="text-gray-300 text-sm">
                         从战略规划到落地实施，全程陪伴企业完成 AI 转型与流程变革，确保转型成功。
                     </p>
                 </div>
@@ -250,8 +446,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2"><span data-i18n="service2_title">定义人机边界</span></h3>
-                    <p class="text-gray-300 text-sm" data-i18n="service2_desc">
+                    <h3 class="text-xl font-bold mb-2">定义人机边界</h3>
+                    <p class="text-gray-300 text-sm">
                         科学规划 AI 与人类的协作模式，明确职责分工，最大化人机协同效率。
                     </p>
                 </div>
@@ -261,8 +457,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-2"><span data-i18n="service3_title">员工技能提升</span></h3>
-                    <p class="text-gray-300 text-sm" data-i18n="service3_desc">
+                    <h3 class="text-xl font-bold mb-2">员工技能提升</h3>
+                    <p class="text-gray-300 text-sm">
                         系统性培训员工 AI 技能，从基础使用到高级应用，打造企业 AI 人才梯队。
                     </p>
                 </div>
@@ -289,7 +485,7 @@
             <!-- 联系信息 -->
             <div class="mt-12 pt-8 border-t border-white/20">
                 <p class="text-gray-300 text-sm mb-2">联系我们：contact-growth@proton.me</p>
-                <p class="text-gray-400 text-xs" data-i18n="response_time">我们将在 24 小时内回复您的咨询</p>
+                <p class="text-gray-400 text-xs">我们将在 24 小时内回复您的咨询</p>
             </div>
         </div>
     </section>
@@ -511,30 +707,6 @@
                     ],
                     "website": "https://github.com/drawthis/drawthis",
                     "tags": ["开源工具", "图表绘制", "Thinkcell替代", "免费"]
-                },
-                {
-                    "id": "suwen-ai",
-                    "name": "素问 AI",
-                    "logo": "assets/logos/suwen.svg",
-                    "category": "企业AI",
-                    "description": "企业级数据智能体平台，面向制造业构建产业竞争洞察服务，将碎片化信息转化为可决策的产业认知。",
-                    "description_en": "Enterprise data intelligence platform building industrial competitive insight services for manufacturing, transforming fragmented information into actionable industrial cognition.",
-                    "recommendation": "企业级数据智能体平台，200+企业客户验证，20倍效率提升，支撑企业在不确定环境中的长期战略判断。",
-                    "recommendation_en": "Enterprise data intelligence platform verified by 200+ enterprise clients with 20x efficiency improvement, supporting long-term strategic decision-making in uncertain environments.",
-                    "useCases": [
-                        "工业竞对洞察",
-                        "TIC行业洞察",
-                        "投后智能监控",
-                        "产业数据智能分析"
-                    ],
-                    "useCases_en": [
-                        "Industrial competitor insight",
-                        "TIC industry insight",
-                        "Post-investment monitoring",
-                        "Industrial data intelligence analysis"
-                    ],
-                    "website": "https://suwen.ai/",
-                    "tags": ["企业AI", "数据智能", "产业洞察", "制造业" ]
                 }
             ]
         };
@@ -543,7 +715,7 @@
         const translations = {
             zh: {
                 nav_tools: "工具库",
-                nav_enterprise: "赋能企业AI转型",
+                nav_categories: "分类",
                 nav_about: "关于我们",
                 nav_explore: "探索工具",
                 hero_title: "赋能咨询顾问的<span class='gradient-text'>智能工具</span>",
@@ -554,9 +726,9 @@
                 filter_ai: "AI工具",
                 filter_data: "数据分析",
                 filter_project: "项目管理",
+                filter_research: "研究工具",
                 filter_market: "市场调研",
                 filter_independent: "独立咨询",
-                filter_enterprise: "企业AI",
                 search_placeholder: "搜索工具名称或关键词...",
                 tools_title: "精选咨询工具",
                 tools_subtitle: "我们为管理咨询和战略咨询顾问精心筛选了以下工具，帮助您提升工作效率、优化客户交付。",
@@ -574,7 +746,7 @@
             },
             en: {
                 nav_tools: "Tools",
-                nav_enterprise: "Empowering Enterprise AI Transformation",
+                nav_categories: "Categories",
                 nav_about: "About",
                 nav_explore: "Explore Tools",
                 hero_title: "Empowering Consultants with <span class='gradient-text'>Smart Tools</span>",
@@ -585,9 +757,9 @@
                 filter_ai: "AI Tools",
                 filter_data: "Data Analysis",
                 filter_project: "Project Management",
+                filter_research: "Research Tools",
                 filter_market: "Market Research",
                 filter_independent: "Independent Consulting",
-                filter_enterprise: "Enterprise AI",
                 search_placeholder: "Search tools or keywords...",
                 tools_title: "Curated Consulting Tools",
                 tools_subtitle: "We've carefully selected these tools for management and strategy consultants to improve efficiency and optimize client delivery.",
@@ -603,10 +775,18 @@
                 scan_qrcode: "Scan to follow our WeChat",
                 update_frequency: "Update frequency: Monthly",
                 copyright: "© 2026 Growth Croissance. Continuously updating.",
-                atypica_case1: "Market size and trend analysis",
-                atypica_case2: "Competitive intelligence gathering",
-                atypica_case3: "Consumer insight extraction",
-                atypica_case4: "Automated industry reports",
+                enterprise_title: "🏢 Enterprise AI Tools",
+                enterprise_subtitle: "AI-powered enterprise software and solutions for the To B market, helping companies achieve intelligent transformation.",
+                suwen_ai: "Suwen AI",
+                suwen_desc: "Vertical large model for healthcare and life sciences, providing professional medical Q&A, literature analysis, and clinical decision support.",
+                suwen_recommend: "Designed specifically for the medical industry with high accuracy and compliance, helping enterprises quickly apply AI to improve R&D and clinical efficiency.",
+                suwen_case1: "Medical literature analysis",
+                suwen_case2: "Clinical trial data interpretation",
+                suwen_case3: "Medical Q&A system",
+                suwen_case4: "Drug R&D assistance",
+                enterprise_platform: "Enterprise AI Platform",
+                platform_desc: "All-in-one enterprise AI middleware that integrates large model capabilities for practical AI solutions.",
+                platform_recommend: "Helps enterprises quickly build AI capabilities with reduced deployment costs and private deployment for data security.",
                 cta_title: "Empowering Enterprise AI Transformation",
                 cta_subtitle: "We provide full-service AI consulting and training for To B companies, accompanying your organization through the AI transformation journey.",
                 service1_title: "AI Transformation Partner",
