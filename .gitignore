@@ -4,7 +4,7 @@ npm-debug.log*
 
 # IDE
 .vscode/
-.idea/
+idea/
 *.swp
 *.swo
 
@@ -23,5 +23,19 @@ Thumbs.db
 # Environment variables
 .env
 .env.local
+
+# OpenClaw system files (do not commit)
+.openclaw/
+AGENTS.md
+HEARTBEAT.md
+IDENTITY.md
+MEMORY.md
+SOUL.md
+TOOLS.md
+USER.md
+
+# Design docs (local only)
+consulting-tools-frontend-design.md
+
+# Secrets (never commit)
 .secrets.md
-deploy-mac.sh
