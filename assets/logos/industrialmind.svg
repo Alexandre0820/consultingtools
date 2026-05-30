@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#10B981" rx="10"/>
+  <text x="50" y="55" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">IND</text>
+  <path d="M30 70 L70 70 L50 85 Z" fill="white" opacity="0.8"/>
+</svg>
