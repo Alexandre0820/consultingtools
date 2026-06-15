@@ -82,6 +82,10 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        .filter-btn.active {
+            background: #4f46e5 !important;
+            color: white !important;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -146,12 +150,61 @@
         </div>
     </section>
 
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="py-10 bg-gradient-to-r from-blue-50 to-purple-50 border-y">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <span class="inline-block px-3 py-1 rounded-full bg-white text-primary-700 text-sm font-semibold shadow-sm" data-i18n="dashboard_label">
+                    AI原生咨询工具库
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-3" data-i18n="dashboard_title">
+                    工具收集仪表盘
+                </h2>
+                <p class="text-gray-600 max-w-3xl mx-auto" data-i18n="dashboard_purpose">
+                    帮助咨询顾问以 AI 原生的方式交付咨询服务：更快获取信息、更结构化地沉淀知识、更高质量地完成客户交付。
+                </p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="bg-white rounded-2xl p-5 shadow-card">
+                    <p class="text-sm text-gray-500" data-i18n="dashboard_total">工具总数</p>
+                    <p class="text-3xl font-bold text-primary-700 mt-2" id="dashboardTotal">0</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-card">
+                    <p class="text-sm text-gray-500" data-i18n="dashboard_ai_tools">AI工具</p>
+                    <p class="text-3xl font-bold text-primary-700 mt-2" id="dashboardAiTools">0</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-card">
+                    <p class="text-sm text-gray-500" data-i18n="dashboard_enterprise_ai">企业AI</p>
+                    <p class="text-3xl font-bold text-primary-700 mt-2" id="dashboardEnterpriseAi">0</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-card">
+                    <p class="text-sm text-gray-500" data-i18n="dashboard_with_links">折扣/联系链接</p>
+                    <p class="text-3xl font-bold text-primary-700 mt-2" id="dashboardWithLinks">0</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 shadow-card">
+                    <p class="text-sm text-gray-500" data-i18n="dashboard_current_view">当前显示</p>
+                    <p class="text-3xl font-bold text-primary-700 mt-2" id="dashboardCurrentView">0</p>
+                </div>
+            </div>
+            <div class="mt-6 bg-white rounded-2xl p-5 shadow-card">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <h3 class="font-heading text-xl font-bold text-gray-900" data-i18n="dashboard_distribution">类型占比</h3>
+                    <p class="text-sm text-gray-500" id="dashboardDistributionSummary">0</p>
+                </div>
+                <div id="dashboardDistribution" class="mt-4 space-y-3"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Filter Section -->
     <section id="categories" class="py-8 bg-white border-b">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <div class="flex flex-wrap gap-2">
-                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="AI" data-i18n="filter_ai">
+                    <button class="filter-btn active px-4 py-2 rounded-full bg-primary-600 text-white text-sm font-medium transition" data-category="all" data-i18n="filter_all">
+                        全部工具
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="AI工具" data-i18n="filter_ai">
                         AI工具
                     </button>
                     <button class="filter-btn px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium transition" data-category="数据分析" data-i18n="filter_data">
@@ -418,7 +471,7 @@
                     "id": "notebooklm",
                     "name": "NotebookLM",
                     "logo": "assets/logos/notebooklm.png",
-                    "category": "AI",
+                    "category": "AI工具",
                     "description": "Google推出的AI研究助手，基于你的文档进行深度分析和对话。",
                     "description_en": "Google's AI research assistant that performs deep analysis and conversation based on your documents.",
                     "recommendation": "上传客户报告、行业研究、竞品分析等文档后，可与AI深度对话，快速提取洞察、生成摘要、发现文档间的关联。",
@@ -659,6 +712,15 @@
                 filter_market: "市场调研",
                 filter_independent: "独立咨询",
                 filter_enterprise: "企业AI",
+                dashboard_label: "AI原生咨询工具库",
+                dashboard_title: "工具收集仪表盘",
+                dashboard_purpose: "帮助咨询顾问以 AI 原生的方式交付咨询服务：更快获取信息、更结构化地沉淀知识、更高质量地完成客户交付。",
+                dashboard_total: "工具总数",
+                dashboard_ai_tools: "AI工具",
+                dashboard_enterprise_ai: "企业AI",
+                dashboard_with_links: "折扣/联系链接",
+                dashboard_current_view: "当前显示",
+                dashboard_distribution: "类型占比",
                 search_placeholder: "搜索工具名称或关键词...",
                 tools_title: "精选咨询工具",
                 tools_subtitle: "我们为管理咨询和战略咨询顾问精心筛选了以下工具，帮助您提升工作效率、优化客户交付。",
@@ -690,6 +752,15 @@
                 filter_market: "Market Research",
                 filter_independent: "Independent Consulting",
                 filter_enterprise: "Enterprise AI",
+                dashboard_label: "AI-Native Consulting Toolkit",
+                dashboard_title: "Tool Collection Dashboard",
+                dashboard_purpose: "Helping consultants deliver services in an AI-native way: gather information faster, structure knowledge better, and improve client delivery quality.",
+                dashboard_total: "Total Tools",
+                dashboard_ai_tools: "AI Tools",
+                dashboard_enterprise_ai: "Enterprise AI",
+                dashboard_with_links: "Discount/Contact Links",
+                dashboard_current_view: "Current View",
+                dashboard_distribution: "Category Distribution",
                 search_placeholder: "Search tools or keywords...",
                 tools_title: "Curated Consulting Tools",
                 tools_subtitle: "We've carefully selected these tools for management and strategy consultants to improve efficiency and optimize client delivery.",
@@ -726,6 +797,29 @@
 
         let currentLang = localStorage.getItem('preferred-lang') || 'zh';
 
+        const categoryLabels = {
+            zh: {
+                'AI工具': 'AI工具',
+                '企业AI': '企业AI',
+                '数据分析': '数据分析',
+                '项目管理': '项目管理',
+                '市场调研': '市场调研',
+                '独立咨询': '独立咨询'
+            },
+            en: {
+                'AI工具': 'AI Tools',
+                '企业AI': 'Enterprise AI',
+                '数据分析': 'Data Analysis',
+                '项目管理': 'Project Management',
+                '市场调研': 'Market Research',
+                '独立咨询': 'Independent Consulting'
+            }
+        };
+
+        function categoryText(category) {
+            return categoryLabels[currentLang]?.[category] || category;
+        }
+
         // Language switcher
         function setLanguage(lang) {
             currentLang = lang;
@@ -738,6 +832,10 @@
                     el.innerHTML = translations[lang][key];
                 }
             });
+
+            if (searchInput) {
+                searchInput.placeholder = translations[lang].search_placeholder;
+            }
 
             // Update language button styles
             document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -764,6 +862,46 @@
         let currentCategory = 'all';
         let currentSearch = '';
 
+        function updateDashboard(filteredTools = toolsData.tools) {
+            const total = document.getElementById('dashboardTotal');
+            const aiTools = document.getElementById('dashboardAiTools');
+            const enterpriseAi = document.getElementById('dashboardEnterpriseAi');
+            const withLinks = document.getElementById('dashboardWithLinks');
+            const currentView = document.getElementById('dashboardCurrentView');
+            const summary = document.getElementById('dashboardDistributionSummary');
+            const distribution = document.getElementById('dashboardDistribution');
+
+            if (!total || !aiTools || !enterpriseAi || !withLinks || !currentView || !summary || !distribution) return;
+
+            const categoryCount = {};
+            toolsData.tools.forEach(tool => {
+                categoryCount[tool.category] = (categoryCount[tool.category] || 0) + 1;
+            });
+
+            total.textContent = toolsData.tools.length;
+            aiTools.textContent = categoryCount['AI工具'] || 0;
+            enterpriseAi.textContent = categoryCount['企业AI'] || 0;
+            withLinks.textContent = toolsData.tools.filter(tool => tool.discountUrl || tool.contactEmail).length;
+            currentView.textContent = `${filteredTools.length} / ${toolsData.tools.length}`;
+            summary.textContent = `${filteredTools.length} ${translations[currentLang].dashboard_distribution}`;
+
+            const entries = Object.entries(categoryCount).sort((a, b) => b[1] - a[1]);
+            distribution.innerHTML = entries.map(([category, count]) => {
+                const percent = Math.round(count / toolsData.tools.length * 100);
+                return `
+                    <div>
+                        <div class="flex justify-between text-sm text-gray-600 mb-1">
+                            <span>${categoryText(category)}</span>
+                            <span>${count} · ${percent}%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-primary-600 h-2.5 rounded-full" style="width: ${percent}%"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
         // Render tools
         function renderTools() {
             const filteredTools = toolsData.tools.filter(tool => {
@@ -773,6 +911,8 @@
                                      tool.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()));
                 return matchesCategory && matchesSearch;
             });
+
+            updateDashboard(filteredTools);
 
             // Hide loading, show grid
             if (loadingState) loadingState.classList.add('hidden');
@@ -796,7 +936,7 @@
                                     ${tool.logo ? `<img src="${tool.logo}" alt="${tool.name}" class="w-12 h-12 object-contain" onerror="this.style.display='none'">` : `<div class="text-2xl font-bold text-primary-600">${tool.name.charAt(0)}</div>`}
                                 </div>
                                 <span class="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
-                                    ${tool.category}
+                                    ${categoryText(tool.category)}
                                 </span>
                             </div>
 
@@ -888,11 +1028,11 @@
             filterButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterButtons.forEach(b => {
-                        b.classList.remove('bg-primary-600', 'text-white');
+                        b.classList.remove('bg-primary-600', 'text-white', 'active');
                         b.classList.add('bg-gray-100', 'text-gray-700');
                     });
                     btn.classList.remove('bg-gray-100', 'text-gray-700');
-                    btn.classList.add('bg-primary-600', 'text-white');
+                    btn.classList.add('bg-primary-600', 'text-white', 'active');
 
                     currentCategory = btn.dataset.category;
                     renderTools();
