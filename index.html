@@ -109,6 +109,8 @@
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#tools" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_tools">工具库</a>
+                    <a href="#news" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_news">热点动态</a>
+                    <a href="#usecases" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_usecases">场景落地</a>
                     <a href="#enterprise-cta" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_enterprise">赋能企业AI转型</a>
                     <a href="#about" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_about">关于我们</a>
                 </div>
@@ -193,6 +195,13 @@
                 </div>
                 <div id="dashboardDistribution" class="mt-4 space-y-3"></div>
             </div>
+
+            <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+                <a href="#tools" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_tools">看工具</a>
+                <a href="#news" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_news">看热点</a>
+                <a href="#usecases" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_usecases">看场景</a>
+                <a href="#enterprise-cta" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_enterprise">企业AI服务</a>
+            </div>
         </div>
     </section>
 
@@ -269,11 +278,41 @@
         </div>
     </section>
 
+    <!-- Tool News Section -->
+    <section id="news" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold" data-i18n="news_label">近期动态</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4" data-i18n="news_title">工具热点动态</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-i18n="news_subtitle">
+                    基于我们收录的工具，持续追踪产品更新、融资进展、生态变化和可复用的咨询落地信号。
+                </p>
+            </div>
+
+            <div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Use Case Section -->
+    <section id="usecases" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-primary-700 text-sm font-semibold" data-i18n="usecases_label">场景落地</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4" data-i18n="usecases_title">咨询顾问区块式 Use Cases</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-i18n="usecases_subtitle">
+                    不再是单点工具展示，而是按咨询项目场景把工具组合成可执行工作流。
+                </p>
+            </div>
+
+            <div id="useCaseGrid" class="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+        </div>
+    </section>
+
     <!-- Enterprise AI Tools Section -->
     <section id="enterprise-cta" class="py-20 md:py-28 bg-gradient-to-r from-primary-900 via-primary-800 to-primary-900 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="mb-6">
-                <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium" data-i18n="enterprise_badge">
                     🚀 企业级服务
                 </span>
             </div>
@@ -324,14 +363,14 @@
             <!-- CTA 按钮 -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:contact-growth@proton.me"
-                   class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary-700 px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition">
+                   class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary-700 px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition" data-i18n="cta_contact">
                     立即咨询
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>
                 </a>
                 <a href="#tools"
-                   class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                   class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition" data-i18n="cta_learnmore">
                     了解更多
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -341,7 +380,7 @@
 
             <!-- 联系信息 -->
             <div class="mt-12 pt-8 border-t border-white/20">
-                <p class="text-gray-300 text-sm mb-2">联系我们：contact-growth@proton.me</p>
+                <p class="text-gray-300 text-sm mb-2" data-i18n="contact_info">联系我们：contact-growth@proton.me</p>
                 <p class="text-gray-400 text-xs" data-i18n="response_time">我们将在 24 小时内回复您的咨询</p>
             </div>
         </div>
@@ -373,8 +412,8 @@
                         <img src="assets/qrcode/qrcode.png" alt="增长" class="w-full h-full object-contain">
                     </div>
                     <div>
-                        <h3 class="font-heading font-bold text-white">增长 Growth Croissance</h3>
-                        <p class="text-sm text-gray-400">咨询顾问的专业工具库</p>
+                        <h3 class="font-heading font-bold text-white" data-i18n="footer_brand">增长 Growth Croissance</h3>
+                        <p class="text-sm text-gray-400" data-i18n="footer_subtitle">咨询顾问的专业工具库</p>
                     </div>
                 </div>
                 <div class="text-center md:text-right">
@@ -694,10 +733,150 @@
             ]
         };
 
+        const toolNews = [
+            {
+                tool: "NotebookLM",
+                title: "NotebookLM 从文档助手走向研究 Agent",
+                title_en: "NotebookLM moves from document assistant to research agent",
+                summary: "Google I/O 2026 后，NotebookLM 被持续讨论为更 agentic 的研究助手：围绕来源发现、云端执行、长上下文和多格式输出展开。对咨询顾问来说，它更适合作为客户资料、研究报告和竞品文档的深读入口。",
+                summary_en: "After Google I/O 2026, NotebookLM is widely discussed as a more agentic research assistant with source discovery, cloud execution, long-context understanding, and multi-format exports. For consultants, it can become the deep-reading layer for client materials, research reports, and competitor documents.",
+                date: "2026-06",
+                source: "Google Blog / community updates",
+                url: "https://blog.google/innovation-and-ai/products/notebooklm/notebooklm-google-io-2026"
+            },
+            {
+                tool: "Glean",
+                title: "Glean 达到 3 亿美元 ARR，定位从搜索扩展到 Work AI",
+                title_en: "Glean reaches $300M ARR and expands from search to Work AI",
+                summary: "Glean 近期披露 3 亿美元 ARR，并强调企业上下文、context graph 和跨部门 AI 工作流。它给咨询项目的启示是：企业知识资产需要被统一索引、权限治理和上下文化，才能支撑 AI 原生交付。",
+                summary_en: "Glean recently disclosed $300M ARR and emphasized enterprise context, context graph, and cross-functional AI workflows. The consulting implication: enterprise knowledge assets must be indexed, governed, and contextualized to support AI-native delivery.",
+                date: "2026-05",
+                source: "TechCrunch / BusinessWire / CNBC",
+                url: "https://techcrunch.com/2026/05/28/gleans-top-line-crosses-300m-as-ai-budget-cutting-becomes-its-major-selling-point"
+            },
+            {
+                tool: "Notion",
+                title: "Notion 3.4 强化 Custom Agents、Dashboard 和 Presentation",
+                title_en: "Notion 3.4 strengthens Custom Agents, dashboards, and presentations",
+                summary: "Notion 2026 年连续发布 Custom Agents、AI Autofill、Dashboard、Presentation Mode 和 AI Skills。咨询团队可以把它作为项目文档、交付模板和轻量 agent 工作流的统一工作区。",
+                summary_en: "Notion has been shipping Custom Agents, AI Autofill, dashboards, presentation mode, and AI skills in 2026. Consulting teams can use it as a unified workspace for project docs, deliverable templates, and lightweight agent workflows.",
+                date: "2026-03 / 2026-04",
+                source: "Notion Releases",
+                url: "https://www.notion.com/releases/2026-04-14"
+            },
+            {
+                tool: "Typeless",
+                title: "AI Voice Keyboard 成为移动办公输入层",
+                title_en: "AI voice keyboard becomes a mobile-work input layer",
+                summary: "Typeless 的近期展示强调跨应用语音输入、实时润色、去语气词和多语言输出。对高频写报告、邮件和会议纪要的顾问来说，它更像是“口述即结构化输出”的生产力层。",
+                summary_en: "Recent Typeless demos emphasize cross-app voice input, real-time polishing, filler-word removal, and multilingual output. For consultants who write reports, emails, and meeting notes daily, it becomes a productivity layer for structured dictation.",
+                date: "2026-05",
+                source: "Product review / YouTube",
+                url: "https://www.youtube.com/watch?v=7bxacAtnfFs"
+            },
+            {
+                tool: "Polsia",
+                title: "Polsia 引发 AI 原生公司构建讨论",
+                title_en: "Polsia sparks discussion on AI-native company building",
+                summary: "社媒消息显示 Polsia 获得新一轮融资并强调 AI agent 参与公司运营。虽然信息源仍需进一步验证，但它反映了独立顾问和小型工作室对 AI 原生商业模式的关注。",
+                summary_en: "Social updates suggest Polsia raised a new round and emphasized AI agents participating in company operations. The source still needs further validation, but it reflects growing attention from independent consultants and small studios toward AI-native business models.",
+                date: "2026-06",
+                source: "Social updates",
+                url: "https://www.instagram.com/p/DYyd7zQFfz_"
+            },
+            {
+                tool: "Second Brain",
+                title: "Second Brain 与 Obsidian MCP 趋势升温",
+                title_en: "Second Brain and Obsidian MCP trend gains momentum",
+                summary: "近期社区内容开始把 Second Brain 与 Obsidian MCP 结合，强调先用知识库构建语义图，再让 LLM 在 IDE 或 agent 中调用。这正符合咨询顾问把项目资料沉淀为可复用知识资产的方向。",
+                summary_en: "Recent community posts connect Second Brain with Obsidian MCP, emphasizing semantic knowledge graphs that LLMs and agents can call from IDEs or workflows. This fits consultants’ need to turn project materials into reusable knowledge assets.",
+                date: "2026-05",
+                source: "Medium / GitHub ecosystem",
+                url: "https://challengeenthusiast.com/grounding-llms-with-a-second-brain-building-an-mcp-for-obsidian-9df6ace8c9a6"
+            }
+        ];
+
+        const useCaseBlocks = [
+            {
+                title: "市场进入与行业研究",
+                title_en: "Market Entry & Industry Research",
+                tools: "Atypica AI + NotebookLM + Glean",
+                tools_en: "Atypica AI + NotebookLM + Glean",
+                goal: "快速建立市场规模、趋势、竞品和客户洞察。",
+                goal_en: "Rapidly build market size, trend, competitor, and customer insights.",
+                workflow: "先用 Atypica AI 收集市场与竞品数据，再用 NotebookLM 深读客户资料和行业报告，最后用 Glean 统一检索企业内部资料和历史项目。",
+                workflow_en: "Use Atypica AI to collect market and competitor data, NotebookLM to deep-read client materials and industry reports, and Glean to search internal enterprise knowledge and past projects.",
+                output: "市场地图、竞品对比、机会优先级、初步战略假设。",
+                output_en: "Market map, competitor comparison, opportunity prioritization, and initial strategic hypotheses."
+            },
+            {
+                title: "项目文档与知识沉淀",
+                title_en: "Project Documentation & Knowledge Capture",
+                tools: "Notion + Second Brain + NotebookLM",
+                tools_en: "Notion + Second Brain + NotebookLM",
+                goal: "把分散资料变成可检索、可复用、可交付的知识库。",
+                goal_en: "Turn scattered materials into searchable, reusable, and deliverable knowledge assets.",
+                workflow: "Notion 负责项目空间、任务、模板和交付物；Second Brain 负责把原始资料编译为结构化 wiki；NotebookLM 负责多文档问答和洞察提取。",
+                workflow_en: "Notion manages project spaces, tasks, templates, and deliverables; Second Brain compiles raw materials into structured wiki pages; NotebookLM enables multi-document Q&A and insight extraction.",
+                output: "项目知识库、客户交付模板、会议纪要索引、执行摘要。",
+                output_en: "Project knowledge base, client delivery templates, meeting-note index, and executive summaries."
+            },
+            {
+                title: "客户沟通与报告撰写",
+                title_en: "Client Communication & Report Writing",
+                tools: "Typeless + Xavier AI + Notion",
+                tools_en: "Typeless + Xavier AI + Notion",
+                goal: "把顾问的想法、会议反馈和草稿快速变成高质量文本。",
+                goal_en: "Turn consultant thoughts, meeting feedback, and drafts into high-quality text faster.",
+                workflow: "会议后先用 Typeless 口述反馈和观点，再让 Xavier AI 生成结构化报告初稿，最后在 Notion 中完成版本管理、评论和交付确认。",
+                workflow_en: "After meetings, use Typeless to dictate feedback and viewpoints, let Xavier AI generate a structured report draft, and manage versions, comments, and delivery confirmation in Notion.",
+                output: "客户邮件、访谈纪要、报告初稿、PPT story outline。",
+                output_en: "Client emails, interview notes, report drafts, and PPT story outlines."
+            },
+            {
+                title: "企业 AI 转型诊断",
+                title_en: "Enterprise AI Transformation Diagnosis",
+                tools: "Glean + 素问 AI + IndustrialMind.AI",
+                tools_en: "Glean + Suwen AI + IndustrialMind.AI",
+                goal: "识别企业知识、数据和流程中的 AI 落地机会。",
+                goal_en: "Identify AI adoption opportunities across enterprise knowledge, data, and processes.",
+                workflow: "Glean 用于发现企业知识孤岛，素问 AI 用于产业竞争洞察，IndustrialMind.AI 用于制造场景中的设备、生产和质量数据分析。",
+                workflow_en: "Glean identifies enterprise knowledge silos, Suwen AI supports industrial competitive insights, and IndustrialMind.AI analyzes manufacturing equipment, production, and quality data.",
+                output: "AI 成熟度评估、数据资产清单、用例优先级、转型路线图。",
+                output_en: "AI maturity assessment, data asset inventory, use-case prioritization, and transformation roadmap."
+            },
+            {
+                title: "独立咨询商业化",
+                title_en: "Independent Consulting Commercialization",
+                tools: "Polsia + Typeless + Notion",
+                tools_en: "Polsia + Typeless + Notion",
+                goal: "从个人能力出发，设计定位、服务包、定价和获客路径。",
+                goal_en: "Design positioning, service packages, pricing, and acquisition paths from individual capabilities.",
+                workflow: "Polsia 帮助评估独立咨询机会和商业模式，Typeless 帮助快速记录想法和客户沟通，Notion 负责服务包、CRM、交付模板和运营看板。",
+                workflow_en: "Polsia helps evaluate independent consulting opportunities and business models, Typeless captures ideas and client communication quickly, and Notion manages service packages, CRM, delivery templates, and operating dashboards.",
+                output: "个人定位、服务菜单、定价页、客户获取清单。",
+                output_en: "Personal positioning, service menu, pricing page, and client acquisition checklist."
+            },
+            {
+                title: "图表与商业可视化",
+                title_en: "Charts & Business Visualization",
+                tools: "DrawThis + Tyrion + Notion",
+                tools_en: "DrawThis + Tyrion + Notion",
+                goal: "把分析结论快速转化为咨询报告中的专业图表。",
+                goal_en: "Turn analytical conclusions into professional consulting-report charts faster.",
+                workflow: "Tyrion 提供市场机会和竞争分析线索，DrawThis 生成瀑布图、甘特图、组织结构图等商业图表，Notion 负责把图表沉淀到项目模板。",
+                workflow_en: "Tyrion provides market opportunity and competitive-analysis signals, DrawThis creates waterfall, Gantt, and org charts, and Notion stores the visuals in reusable project templates.",
+                output: "商业图表、项目时间线、组织图、报告可视化素材。",
+                output_en: "Business charts, project timelines, org charts, and report visualization assets."
+            }
+        ];
+
         // Language data
         const translations = {
             zh: {
                 nav_tools: "工具库",
+                nav_news: "热点动态",
+                nav_usecases: "场景落地",
                 nav_enterprise: "赋能企业AI转型",
                 nav_about: "关于我们",
                 nav_explore: "探索工具",
@@ -721,11 +900,31 @@
                 dashboard_with_links: "折扣/联系链接",
                 dashboard_current_view: "当前显示",
                 dashboard_distribution: "类型占比",
+                enterprise_badge: "企业级服务",
+                cta_contact: "立即咨询",
+                cta_learnmore: "了解更多",
+                contact_info: "联系我们：contact-growth@proton.me",
+                footer_brand: "Growth Croissance",
+                footer_subtitle: "Professional toolkit for consultants",
                 search_placeholder: "搜索工具名称或关键词...",
+                quick_nav_tools: "看工具",
+                quick_nav_news: "看热点",
+                quick_nav_usecases: "看场景",
+                quick_nav_enterprise: "企业AI服务",
                 tools_title: "精选咨询工具",
                 tools_subtitle: "我们为管理咨询和战略咨询顾问精心筛选了以下工具，帮助您提升工作效率、优化客户交付。",
                 loading: "加载工具数据中...",
                 no_results: "未找到匹配的工具，请尝试其他关键词。",
+                news_label: "近期动态",
+                news_title: "工具热点动态",
+                news_subtitle: "基于我们收录的工具，持续追踪产品更新、融资进展、生态变化和可复用的咨询落地信号。",
+                news_source: "来源",
+                usecases_label: "场景落地",
+                usecases_title: "咨询顾问区块式 Use Cases",
+                usecases_subtitle: "不再是单点工具展示，而是按咨询项目场景把工具组合成可执行工作流。",
+                usecase_goal: "场景目标",
+                usecase_workflow: "推荐工作流",
+                usecase_output: "典型交付物",
                 recommendation: "推荐理由：",
                 use_cases: "适用场景",
                 visit_website: "访问官网",
@@ -738,6 +937,8 @@
             },
             en: {
                 nav_tools: "Tools",
+                nav_news: "News",
+                nav_usecases: "Use Cases",
                 nav_enterprise: "Empowering Enterprise AI Transformation",
                 nav_about: "About",
                 nav_explore: "Explore Tools",
@@ -761,11 +962,31 @@
                 dashboard_with_links: "Discount/Contact Links",
                 dashboard_current_view: "Current View",
                 dashboard_distribution: "Category Distribution",
+                enterprise_badge: "Enterprise Services",
+                cta_contact: "Contact Us",
+                cta_learnmore: "Learn More",
+                contact_info: "Contact: contact-growth@proton.me",
+                footer_brand: "Growth Croissance",
+                footer_subtitle: "Professional toolkit for consultants",
                 search_placeholder: "Search tools or keywords...",
+                quick_nav_tools: "View Tools",
+                quick_nav_news: "View News",
+                quick_nav_usecases: "View Use Cases",
+                quick_nav_enterprise: "Enterprise AI Services",
                 tools_title: "Curated Consulting Tools",
                 tools_subtitle: "We've carefully selected these tools for management and strategy consultants to improve efficiency and optimize client delivery.",
                 loading: "Loading tools...",
                 no_results: "No matching tools found. Try different keywords.",
+                news_label: "Recent Updates",
+                news_title: "Tool Hot Topics",
+                news_subtitle: "Based on the tools we curate, we track product updates, funding progress, ecosystem changes, and reusable consulting adoption signals.",
+                news_source: "Source",
+                usecases_label: "Use Cases",
+                usecases_title: "Block-Based Use Cases for Consultants",
+                usecases_subtitle: "Instead of showing tools one by one, we combine them into executable workflows by consulting project scenario.",
+                usecase_goal: "Scenario Goal",
+                usecase_workflow: "Recommended Workflow",
+                usecase_output: "Typical Deliverables",
                 recommendation: "Why we recommend:",
                 use_cases: "Use Cases",
                 visit_website: "Visit Website",
@@ -820,6 +1041,64 @@
             return categoryLabels[currentLang]?.[category] || category;
         }
 
+        function renderNews() {
+            const newsGrid = document.getElementById('newsGrid');
+            if (!newsGrid) return;
+            newsGrid.innerHTML = toolNews.map(item => `
+                <article class="bg-white rounded-2xl p-6 shadow-card border border-gray-100 hover:shadow-card-hover transition">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <div>
+                            <p class="text-xs font-semibold text-primary-600 mb-2">${item.tool}</p>
+                            <h3 class="font-heading text-lg font-bold text-gray-900 leading-snug">${currentLang === 'zh' ? item.title : item.title_en}</h3>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium whitespace-nowrap">${item.date}</span>
+                    </div>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-5">${currentLang === 'zh' ? item.summary : item.summary_en}</p>
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
+                        ${translations[currentLang].news_source}: ${item.source}
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </article>
+            `).join('');
+        }
+
+        function renderUseCases() {
+            const useCaseGrid = document.getElementById('useCaseGrid');
+            if (!useCaseGrid) return;
+            useCaseGrid.innerHTML = useCaseBlocks.map(block => `
+                <article class="bg-white rounded-3xl p-6 md:p-8 shadow-card border border-gray-100">
+                    <div class="flex items-start justify-between gap-4 mb-5">
+                        <div>
+                            <h3 class="font-heading text-2xl font-bold text-gray-900 mb-2">${currentLang === 'zh' ? block.title : block.title_en}</h3>
+                            <p class="text-sm font-semibold text-primary-600">${currentLang === 'zh' ? block.tools : block.tools_en}</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-primary-600 mb-2">${translations[currentLang].usecase_goal}</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">${currentLang === 'zh' ? block.goal : block.goal_en}</p>
+                        </div>
+                        <div class="bg-purple-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-primary-600 mb-2">${translations[currentLang].usecase_workflow}</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">${currentLang === 'zh' ? block.workflow : block.workflow_en}</p>
+                        </div>
+                        <div class="bg-green-50 rounded-2xl p-4">
+                            <p class="text-xs font-semibold text-primary-600 mb-2">${translations[currentLang].usecase_output}</p>
+                            <p class="text-sm text-gray-700 leading-relaxed">${currentLang === 'zh' ? block.output : block.output_en}</p>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
         // Language switcher
         function setLanguage(lang) {
             currentLang = lang;
@@ -848,8 +1127,10 @@
                 }
             });
 
-            // Re-render tools to update button texts
+            // Re-render dynamic sections to update language
             renderTools();
+            renderNews();
+            renderUseCases();
         }
 
         // DOM Elements
@@ -1015,10 +1296,14 @@
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', () => {
                     renderTools();
+                    renderNews();
+                    renderUseCases();
                     setupEventListeners();
                 });
             } else {
                 renderTools();
+                renderNews();
+                renderUseCases();
                 setupEventListeners();
             }
         }
