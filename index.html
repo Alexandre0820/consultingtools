@@ -112,6 +112,7 @@
                     <a href="#news" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_news">热点动态</a>
                     <a href="#usecases" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_usecases">场景落地</a>
                     <a href="#join-community" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_community">申请加入社区</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_skills">咨询技能包</a>
                     <a href="#enterprise-cta" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_enterprise">赋能企业AI转型</a>
                     <a href="#about" class="text-gray-600 hover:text-primary-600 transition" data-i18n="nav_about">关于我们</a>
                 </div>
@@ -237,6 +238,7 @@
                 <a href="#tools" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_tools">看工具</a>
                 <a href="#news" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_news">看热点</a>
                 <a href="#usecases" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_usecases">看场景</a>
+                <a href="#skills" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_skills">技能包</a>
                 <a href="#join-community" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_community">申请加入社区</a>
                 <a href="#enterprise-cta" class="px-4 py-2 rounded-full bg-white text-primary-700 hover:bg-primary-50 border border-primary-100 shadow-sm transition" data-i18n="quick_nav_enterprise">企业AI服务</a>
             </div>
@@ -312,6 +314,33 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <p class="text-gray-500 text-lg" data-i18n="no_results">未找到匹配的工具，请尝试其他关键词。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold" data-i18n="skills_label">技能包</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4" data-i18n="skills_title">咨询行业 AI 技能包</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="skills_subtitle">5 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。</p>
+            </div>
+            <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                <!-- Skills will be loaded dynamically from GitHub API -->
+                <div class="col-span-full text-center py-12">
+                    <div class="inline-block w-8 h-8 border-4 border-primary-200 border-t-primary-600 rounded-full animate-spin"></div>
+                    <p class="text-gray-500 mt-4" data-i18n="skills_loading">加载技能列表中...</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://alexandre0820.github.io/consulting-skills/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition">
+                    <span data-i18n="skills_view_all">查看全部技能</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -1078,6 +1107,7 @@
                 quick_nav_tools: "看工具",
                 quick_nav_news: "看热点",
                 quick_nav_usecases: "看场景",
+                quick_nav_skills: "技能包",
                 quick_nav_community: "申请加入社区",
                 quick_nav_enterprise: "企业AI服务",
                 tools_title: "精选咨询工具",
@@ -1086,6 +1116,13 @@
                 no_results: "未找到匹配的工具，请尝试其他关键词。",
                 news_label: "近期动态",
                 news_title: "工具热点动态",
+                nav_skills: "咨询技能包",
+                skills_label: "技能包",
+                skills_title: "咨询行业 AI 技能包",
+                skills_subtitle: "5 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。",
+                skills_loading: "加载技能列表中...",
+                skills_view_all: "查看全部技能",
+                skills_view: "查看技能",
                 news_subtitle: "基于我们收录的工具，持续追踪产品更新、融资进展、生态变化和可复用的咨询落地信号。",
                 news_source: "来源",
                 usecases_label: "场景落地",
@@ -1167,6 +1204,7 @@
                 quick_nav_tools: "View Tools",
                 quick_nav_news: "View News",
                 quick_nav_usecases: "View Use Cases",
+                quick_nav_skills: "Skills Pack",
                 quick_nav_community: "Join Community",
                 quick_nav_enterprise: "Enterprise AI Services",
                 tools_title: "Curated Consulting Tools",
@@ -1175,6 +1213,13 @@
                 no_results: "No matching tools found. Try different keywords.",
                 news_label: "Recent Updates",
                 news_title: "Tool Hot Topics",
+                nav_skills: "Consulting Skills",
+                skills_label: "Skills Pack",
+                skills_title: "Consulting Industry AI Skills Pack",
+                skills_subtitle: "5 battle-tested core consulting skills, each with complete input-output-process definitions, ready to copy into your agent system prompts.",
+                skills_loading: "Loading skills list...",
+                skills_view_all: "View All Skills",
+                skills_view: "View Skill",
                 news_subtitle: "Based on the tools we curate, we track product updates, funding progress, ecosystem changes, and reusable consulting adoption signals.",
                 news_source: "Source",
                 usecases_label: "Use Cases",
@@ -1326,6 +1371,7 @@
             // Re-render dynamic sections to update language
             renderTools();
             renderNews();
+            renderSkills();
             renderUseCases();
         }
 
@@ -1476,6 +1522,105 @@
             }
         }
 
+        // Render consulting skills from GitHub API
+        async function renderSkills() {
+            const grid = document.getElementById('skillsGrid');
+            if (!grid) return;
+
+            // Skill metadata: filename -> display info
+            const skillMeta = {
+                'skill-1-interview-insights': {
+                    icon: '🎤',
+                    title: { zh: '客户访谈 → 结构化洞察', en: 'Client Interview → Structured Insights' },
+                    desc: { zh: '访谈后整理时间从 1-2 小时压缩至 15 分钟。自动提炼痛点-根因-影响三元组，生成关键洞察与下轮问题。', en: 'Compress post-interview organization from 1-2 hours to 15 minutes. Auto-extract pain point-root cause-impact triples.' }
+                },
+                'skill-2-research-issue-tree': {
+                    icon: '🔍',
+                    title: { zh: '案头研究 → 问题树草稿', en: 'Desk Research → Issue Tree Draft' },
+                    desc: { zh: '从「行业综述」到「可拆解的问题树」。输出一级/二级分支、待验证假设和研究空白。', en: 'From industry overview to actionable issue tree. Output primary/secondary branches, hypotheses, and research gaps.' }
+                },
+                'skill-3-weekly-report': {
+                    icon: '📊',
+                    title: { zh: '客户经营周报自动草稿', en: 'Client Weekly Report Auto-Draft' },
+                    desc: { zh: '周报产出从 2-3 小时压缩至 20 分钟。自动对比趋势、识别异常、追踪上期建议执行。', en: 'Compress weekly report from 2-3 hours to 20 minutes. Auto-compare trends, identify anomalies, track action items.' }
+                },
+                'skill-4-proposal-deck': {
+                    icon: '📑',
+                    title: { zh: '提案 Deck 结构与素材拼装', en: 'Proposal Deck Structure & Assembly' },
+                    desc: { zh: '提案准备时间缩短 60%+。AI 先搭骨架+素材建议，你只做故事线打磨。', en: 'Reduce proposal prep time by 60%+. AI builds the skeleton and suggests materials, you polish the storyline.' }
+                },
+                'skill-5-project-review': {
+                    icon: '💡',
+                    title: { zh: '项目复盘 → 知识资产', en: 'Project Review → Knowledge Assets' },
+                    desc: { zh: '让复盘从「进了网盘深处」变成可检索、可复用的组织知识资产。', en: 'Transform project reviews from buried files into searchable, reusable organizational knowledge assets.' }
+                }
+            };
+
+            try {
+                const resp = await fetch('https://api.github.com/repos/Alexandre0820/consulting-skills/contents/skills');
+                if (!resp.ok) throw new Error('GitHub API error: ' + resp.status);
+                const files = await resp.json();
+
+                const lang = currentLang || 'zh';
+                const skillFiles = files.filter(f => f.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name));
+
+                grid.innerHTML = skillFiles.map(file => {
+                    const key = file.name.replace('.md', '');
+                    const meta = skillMeta[key] || {
+                        icon: '📋',
+                        title: { zh: key, en: key },
+                        desc: { zh: '', en: '' }
+                    };
+                    const skillUrl = 'https://alexandre0820.github.io/consulting-skills/#' + key;
+                    const githubUrl = file.html_url;
+
+                    return `
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-primary-200 transition-all duration-300">
+                            <div class="text-3xl mb-3">${meta.icon}</div>
+                            <h3 class="font-bold text-lg text-gray-900 mb-2">${meta.title[lang] || meta.title.zh}</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">${meta.desc[lang] || meta.desc.zh}</p>
+                            <div class="flex gap-2">
+                                <a href="${skillUrl}" target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
+                                    <span data-i18n="skills_view">查看技能</span>
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                                <a href="${githubUrl}" target="_blank" rel="noopener noreferrer"
+                                   class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+            } catch (err) {
+                console.warn('Failed to load skills from GitHub:', err);
+                // Fallback: show static cards with link to the skills page
+                grid.innerHTML = Object.entries(skillMeta).map(([key, meta]) => {
+                    const lang = currentLang || 'zh';
+                    return `
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                            <div class="text-3xl mb-3">${meta.icon}</div>
+                            <h3 class="font-bold text-lg text-gray-900 mb-2">${meta.title[lang] || meta.title.zh}</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">${meta.desc[lang] || meta.desc.zh}</p>
+                            <a href="https://alexandre0820.github.io/consulting-skills/#${key}" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
+                                <span data-i18n="skills_view">查看技能</span>
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    `;
+                }).join('');
+            }
+        }
+
         // Initialize
         function init() {
             // Initialize language
@@ -1494,12 +1639,14 @@
                     renderTools();
                     renderNews();
                     renderUseCases();
+                    renderSkills();
                     setupEventListeners();
                 });
             } else {
                 renderTools();
                 renderNews();
                 renderUseCases();
+                renderSkills();
                 setupEventListeners();
             }
         }
