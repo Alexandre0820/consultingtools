@@ -324,7 +324,7 @@
             <div class="text-center mb-12">
                 <span class="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold" data-i18n="skills_label">技能包</span>
                 <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-4" data-i18n="skills_title">咨询行业 AI 技能包</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="skills_subtitle">5 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。</p>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="skills_subtitle">6 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。</p>
             </div>
             <div id="skillsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
                 <!-- Skills will be loaded dynamically from GitHub API -->
@@ -1171,7 +1171,7 @@
                 nav_skills: "咨询技能包",
                 skills_label: "技能包",
                 skills_title: "咨询行业 AI 技能包",
-                skills_subtitle: "5 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。",
+                skills_subtitle: "6 个经过实战验证的咨询核心技能，每个技能定义了完整的输入-输出-流程，可直接复制到智能体系统提示中使用。",
                 skills_loading: "加载技能列表中...",
                 skills_view_all: "查看全部技能",
                 skills_view: "查看技能",
@@ -1268,7 +1268,7 @@
                 nav_skills: "Consulting Skills",
                 skills_label: "Skills Pack",
                 skills_title: "Consulting Industry AI Skills Pack",
-                skills_subtitle: "5 battle-tested core consulting skills, each with complete input-output-process definitions, ready to copy into your agent system prompts.",
+                skills_subtitle: "6 battle-tested core consulting skills, each with complete input-output-process definitions, ready to copy into your agent system prompts.",
                 skills_loading: "Loading skills list...",
                 skills_view_all: "View All Skills",
                 skills_view: "View Skill",
@@ -1605,26 +1605,30 @@
                     icon: '💡',
                     title: { zh: '项目复盘 → 知识资产', en: 'Project Review → Knowledge Assets' },
                     desc: { zh: '让复盘从「进了网盘深处」变成可检索、可复用的组织知识资产。', en: 'Transform project reviews from buried files into searchable, reusable organizational knowledge assets.' }
+                },
+                'guizang-ppt': {
+                    icon: '🎨',
+                    title: { zh: '歸藏 PPT 技能', en: 'Guizang PPT Skill' },
+                    desc: { zh: 'AI Agent 生成精美 HTML 幻灯片，内置杂志风和瑞士国际主义两种视觉系统，适合咨询提案和路演。', en: 'AI Agent generates polished HTML slide decks with editorial magazine and Swiss international visual systems, ideal for consulting proposals and roadshows.' }
                 }
             };
 
             try {
                 const resp = await fetch('https://api.github.com/repos/Alexandre0820/consulting-skills/contents/skills');
-                if (!resp.ok) throw new Error('GitHub API error: ' + resp.status);
-                const files = await resp.json();
+                const files = resp.ok ? (await resp.json()).filter(f => f.name.endsWith('.md')) : [];
+                const fileMap = {};
+                files.forEach(f => { fileMap[f.name.replace('.md', '')] = f.html_url; });
 
                 const lang = currentLang || 'zh';
-                const skillFiles = files.filter(f => f.name.endsWith('.md')).sort((a, b) => a.name.localeCompare(b.name));
+                const skillKeys = Object.keys(skillMeta);
 
-                grid.innerHTML = skillFiles.map(file => {
-                    const key = file.name.replace('.md', '');
-                    const meta = skillMeta[key] || {
-                        icon: '📋',
-                        title: { zh: key, en: key },
-                        desc: { zh: '', en: '' }
-                    };
-                    const skillUrl = 'https://alexandre0820.github.io/consulting-skills/#' + key;
-                    const githubUrl = file.html_url;
+                grid.innerHTML = skillKeys.map(key => {
+                    const meta = skillMeta[key];
+                    const githubUrl = fileMap[key] || null;
+                    const skillUrl = key === 'guizang-ppt'
+                        ? 'https://github.com/op7418/guizang-ppt-skill'
+                        : 'https://alexandre0820.github.io/consulting-skills/#' + key;
+                    const btnLabel = key === 'guizang-ppt' ? (lang === 'zh' ? '查看仓库' : 'View Repo') : (translations[lang]?.skills_view || '查看技能');
 
                     return `
                         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-primary-200 transition-all duration-300">
@@ -1634,17 +1638,18 @@
                             <div class="flex gap-2">
                                 <a href="${skillUrl}" target="_blank" rel="noopener noreferrer"
                                    class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
-                                    <span data-i18n="skills_view">查看技能</span>
+                                    <span>${btnLabel}</span>
                                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                     </svg>
                                 </a>
+                                ${githubUrl ? `
                                 <a href="${githubUrl}" target="_blank" rel="noopener noreferrer"
                                    class="inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
-                                </a>
+                                </a>` : ''}
                             </div>
                         </div>
                     `;
@@ -1655,14 +1660,18 @@
                 // Fallback: show static cards with link to the skills page
                 grid.innerHTML = Object.entries(skillMeta).map(([key, meta]) => {
                     const lang = currentLang || 'zh';
+                    const skillUrl = key === 'guizang-ppt'
+                        ? 'https://github.com/op7418/guizang-ppt-skill'
+                        : 'https://alexandre0820.github.io/consulting-skills/#' + key;
+                    const btnLabel = key === 'guizang-ppt' ? (lang === 'zh' ? '查看仓库' : 'View Repo') : (translations[lang]?.skills_view || '查看技能');
                     return `
                         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
                             <div class="text-3xl mb-3">${meta.icon}</div>
                             <h3 class="font-bold text-lg text-gray-900 mb-2">${meta.title[lang] || meta.title.zh}</h3>
                             <p class="text-gray-600 text-sm mb-4 leading-relaxed">${meta.desc[lang] || meta.desc.zh}</p>
-                            <a href="https://alexandre0820.github.io/consulting-skills/#${key}" target="_blank" rel="noopener noreferrer"
+                            <a href="${skillUrl}" target="_blank" rel="noopener noreferrer"
                                class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700">
-                                <span data-i18n="skills_view">查看技能</span>
+                                <span>${btnLabel}</span>
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                 </svg>
